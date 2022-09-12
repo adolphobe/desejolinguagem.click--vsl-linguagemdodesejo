@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <title>Página de VSL</title>
@@ -8,7 +8,8 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
+  
+  <style>
     /*-- VARIAVEIS */
     :root{
         --maxima-largura-comments: 575px;        
@@ -26,7 +27,7 @@
 <div class="top-content">
    <div class="head">
     <img class="img" src="https://andreaestradas.com/v2/assets/img/ultrasecreto-1-1.png">
-    <div class="text">Essa é uma headline de exemplo da página da VSL</div> 
+    <div class="text">Essa é uma headline de exemplo da página da VSL</div>
     <div class="sub_text">Essa é uma sub-headline de exemplo da página da VSL</div>
 
     <div class="vsl"><img src="https://wallpaperaccess.com/full/6392691.jpg" width="100%" style="opacity:0.7;"></div>
