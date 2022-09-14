@@ -38,10 +38,8 @@ $(window).scroll(function(){
 
     var rolou = wintop/(docheight-winheight)*100;
     
-    if(rolou>30){
-      fbq('track', 'PageView');
-      alert('maior que 30');
-      alert ('rolou');
+    if (wintop > showTrigger){
+       alert('opa');
     }
 });
     
