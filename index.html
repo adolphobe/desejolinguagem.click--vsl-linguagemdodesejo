@@ -35,11 +35,11 @@ $(window).scroll(function(){
 
     var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
     var  scrolltrigger = 0.95;
-
-    var rolou = wintop/(docheight-winheight)*100;
-    
-    if (wintop > showTrigger){
-       alert('opa');
+  
+    if(rolou>30){
+      fbq('track', '30tao');
+      alert('maior que 30');
+      alert ('rolou');
     }
 });
     
