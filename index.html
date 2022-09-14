@@ -30,24 +30,24 @@
   fbq('init', '122341646111651');
   fbq('track', 'PageView');
 
-  var scrollPerQuestion = 50;
-    // Total space needed to scroll through all questions
-    var slackSpace = questions.length * scrollPerQuestion;
-    // Set appropriate document height for scrolling all questions:
-    $('body').height($(document).height() + slackSpace);
-    
-    $(window).scroll(function(){
-        // Calculate the percentage of the total window that the user has scrolled
-        var progress = $(window).scrollTop() / slackSpace;
-        // Convert progress into question number
-        var questNum = Math.floor(progress * questions.length);
-        // Make sure the question number does not pass the maximum
-        var questNum = Math.min(questNum, questions.length);
-        // Display corresponding question
-       alert('teste');
-    });
-    // Scroll to top on page load
-    $(window).scrollTop(0).trigger('scroll');
+  //capture scroll any percentage
+$(window).scroll(function(){
+
+var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+var  scrolltrigger = 0.95;
+
+console.log('wintop='+wintop);
+console.log('docheight='+docheight);
+console.log('winheight='+winheight);
+console.log(wintop+'=='+(docheight-winheight));
+console.log(wintop==(docheight-winheight));
+console.log('%scrolled='+(wintop/(docheight-winheight))*100);
+
+if  ((wintop/(docheight-winheight)) > scrolltrigger) {
+   console.log('scroll bottom');
+   lastAddedLiveFunc();
+}
+});
     
 </script>
 <noscript>
