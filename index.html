@@ -40,8 +40,9 @@ $(window).on('scroll',function(){
     if(rolou>30){
       fbq('track', 'aaa');
       alert('maior que 30');
+      $(window).off('scroll');
     }
-    $(window).off('scroll');
+   
 });
     
 </script>
