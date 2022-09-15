@@ -35,11 +35,9 @@
   //Verifica se botão "Ver mais 5 comentários" está visivel
   $(window).on('scroll',function() {
     if (checkVisible($('.fb-comments-loadmore'))) {
-        alert("Visible!!!");
+      fbq('track', 'ComentView');
         $(window).off('scroll');
-    } else {
-        // do nothing
-    }
+    } else {}
 });
 
 function checkVisible( elm, eval ) {
