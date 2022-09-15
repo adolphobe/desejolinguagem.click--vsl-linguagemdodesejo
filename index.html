@@ -31,6 +31,12 @@
   fbq('track', 'PageView');
 
 
+  $(document).ready(function($) {
+    setTimeout(function() {
+     alert("10 segundos");
+    }, 10 * 1000);
+});
+
 
   //Verifica se botão "Ver mais 5 comentários" está visivel
   $(window).on('scroll',function() {
