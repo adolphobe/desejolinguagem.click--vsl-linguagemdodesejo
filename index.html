@@ -31,7 +31,9 @@
   fbq('track', 'PageView');
 
   $("#smartplayer").click( function() {
-  $( "#smartplayer" ).hasClass( "smartplayer-playing" ).alert('tocando');
+    if ( $( this ).hasClass( "smartplayer-playing" ) ) {
+      alert('tocando');
+    }
   });
 
 //3 minutos
