@@ -31,17 +31,32 @@
   fbq('track', 'PageView');
 
 
+//3 minutos
   $(document).ready(function($) {
     setTimeout(function() {
-     alert("10 segundos");
-    }, 10 * 1000);
+      fbq('track', 'Assistiu3minutos');
+    }, 180 * 1000);
+});
+
+//10 minutos
+$(document).ready(function($) {
+    setTimeout(function() {
+      fbq('track', 'Assistiu10minutos');
+    }, 600 * 1000);
+});
+
+//20 minutos
+$(document).ready(function($) {
+    setTimeout(function() {
+      fbq('track', 'Assistiu20minutos');
+    }, 1200 * 1000);
 });
 
 
   //Verifica se botão "Ver mais 5 comentários" está visivel
   $(window).on('scroll',function() {
     if (checkVisible($('.fb-comments-loadmore'))) {
-      fbq('track', 'ComentView');
+      fbq('track', 'ViuComentarios');
         $(window).off('scroll');
     } else {}
 });
@@ -57,6 +72,10 @@ function checkVisible( elm, eval ) {
     if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
     
+
+function AddToCart(){
+  fbq('track', 'AddToCart');
+}
 </script>
 <noscript>
   <img height="1" width="1" style="display:none" 
@@ -94,7 +113,7 @@ function checkVisible( elm, eval ) {
     </div>
 
     <div class="mostrar" style="margin-top:30px;">
-    <a href="#" class="a-btn" style="text-decoration: none;">
+    <a href="#" class="a-btn" style="text-decoration: none;" onclick="AddToCart();">
         <span class="span-btn">SIM, QUERO COMPRAR ISSO <br> DE UMA VEZ POR TODAS</span>
         <span class="span-btn2">(Atenção: vagas limitadas)</span>
       </a>
