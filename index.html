@@ -32,7 +32,26 @@
 
 
 
+  //Verifica se botão "Ver mais 5 comentários" está visivel
+  $(window).on('scroll',function() {
+    if (checkVisible($('.fb-comments-loadmore'))) {
+        alert("Visible!!!");
+        $(window).off('scroll');
+    } else {
+        // do nothing
+    }
+});
 
+function checkVisible( elm, eval ) {
+    eval = eval || "object visible";
+    var viewportHeight = $(window).height(), // Viewport Height
+        scrolltop = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();   
+    
+    if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+    if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+}
     
 </script>
 <noscript>
@@ -446,19 +465,6 @@
 
 
 <script>
-  //capture scroll any percentage
-  var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
-  var rolou = wintop/(docheight-winheight)*100;
-
-  $(window).on('scroll',function() {    
-    if(rolou>30){
-      fbq('track', 'aaa');
-      alert('maior que 30');
-      $(window).off('scroll');
-    }
-   
-});
-
   //TIMER
 setTimeout(function(){
   $(".mostrar").css("display", "block");
