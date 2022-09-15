@@ -30,13 +30,14 @@
   fbq('init', '122341646111651');
   fbq('track', 'PageView');
 
-  //capture scroll any percentage
-$(window).on('scroll',function(){
 
-    var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
-    var rolou = wintop/(docheight-winheight)*100;
-    
-    
+
+  //capture scroll any percentage
+  var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+  var rolou = wintop/(docheight-winheight)*100;
+
+  $(window).on('scroll',function() {
+        
     if(rolou>30){
       fbq('track', 'aaa');
       alert('maior que 30');
