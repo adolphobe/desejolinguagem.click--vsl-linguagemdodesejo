@@ -30,12 +30,15 @@
   fbq('init', '122341646111651');
   fbq('track', 'PageView');
 
+  $("#smartplayer").click( function() {
+  $( "#smartplayer" ).hasClass( "smartplayer-playing" ).alert('tocando');
+  });
 
 //3 minutos
   $(document).ready(function($) {
     setTimeout(function() {
       fbq('track', 'Assistiu3minutos');
-    }, 10 * 1000);
+    }, 180 * 1000);
 });
 
 //10 minutos
