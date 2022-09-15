@@ -30,7 +30,11 @@
   fbq('init', '122341646111651');
   fbq('track', 'PageView');
 
-  $("#vsl").click( function() {
+  $(".total-video").click( function() {
+    alert ('teste');
+  });
+
+  $("#smartplayer-video").click( function() {
     alert ('teste');
     if ( $( this ).hasClass( "smartplayer-playing" ) ) {
       alert('tocando');
