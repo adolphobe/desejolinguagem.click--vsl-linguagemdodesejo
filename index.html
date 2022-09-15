@@ -36,8 +36,7 @@
   var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
   var rolou = wintop/(docheight-winheight)*100;
 
-  $(window).on('scroll',function() {
-        
+  $(window).on('scroll',function() {    
     if(rolou>30){
       fbq('track', 'aaa');
       alert('maior que 30');
