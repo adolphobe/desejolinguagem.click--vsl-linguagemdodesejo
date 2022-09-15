@@ -31,10 +31,11 @@
   fbq('track', 'PageView');
 
   //capture scroll any percentage
-$(window).scroll(function(){
+$(window).on('scroll',function(){
 
     var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
     var rolou = wintop/(docheight-winheight)*100;
+    
     
     if(rolou>30){
       fbq('track', 'aaa');
