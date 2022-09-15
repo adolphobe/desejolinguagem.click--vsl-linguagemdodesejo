@@ -32,18 +32,7 @@
 
 
 
-  //capture scroll any percentage
-  var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
-  var rolou = wintop/(docheight-winheight)*100;
 
-  $(window).on('scroll',function() {    
-    if(rolou>30){
-      fbq('track', 'aaa');
-      alert('maior que 30');
-      $(window).off('scroll');
-    }
-   
-});
     
 </script>
 <noscript>
@@ -457,6 +446,19 @@
 
 
 <script>
+  //capture scroll any percentage
+  var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+  var rolou = wintop/(docheight-winheight)*100;
+
+  $(window).on('scroll',function() {    
+    if(rolou>30){
+      fbq('track', 'aaa');
+      alert('maior que 30');
+      $(window).off('scroll');
+    }
+   
+});
+
   //TIMER
 setTimeout(function(){
   $(".mostrar").css("display", "block");
